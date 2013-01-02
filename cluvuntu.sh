@@ -81,7 +81,14 @@ echo "Installing LAMPP..."
 sudo apt-get install tasksel
 sudo tasksel install lamp-server
 
-# Install java and dependancies
+# Install Oracle Java Runtime Environment, sould have OpenJDK
+java -version
+echo "Installing java JRE"
+sudo add-apt-repository ppa:webupd8team/java to add the partner repository.
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+java -version
+sudo update-alternatives --config java
 
 # Install python modules
 echo "Installing some sick python modules"
@@ -133,3 +140,9 @@ echo "Restating apache"
 
 # Remove:
 # anything else not used
+
+echo "Clean up"
+# Cleaning up of partial package
+sudo apt-get autoclean
+# Cleaning up of the apt cache:
+sudo apt-get clean
