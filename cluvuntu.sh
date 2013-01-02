@@ -81,6 +81,8 @@ echo "Installing LAMPP..."
 sudo apt-get install tasksel
 sudo tasksel install lamp-server
 
+# Install java and dependancies
+
 # Install python modules
 echo "Installing some sick python modules"
 echo "Check python version, should be 2.7 or 2.8"
@@ -104,9 +106,30 @@ sudo apt-get build-dep python-cvxopt
 sudo apt-get install python-cvxopt
 
 # Install QSTK
+echo "Installing QSTK"
 git clone https://github.com/tucker777/QSTK QSTK
 cd QSTK
 cp config.sh local.sh
+echo "Opening .bashrc, add line 'source QSTK/local.sh' to end of script, save and exit"
+subl ~/.bashrc
+echo "Log out, then log back in"
+echo "Test environment variables:"
+echo $QSDATA
+echo "should print: /nethome/tb34/QSTK/QSData"
 
 echo "Restating apache"
 /etc/init.d/apache2 restart
+
+# Install:
+# EmmaSQL
+# SQLite
+# Spyder
+# RStudio
+# Matlab for Unix
+# Dropbox
+# VMWare Player
+# Ruby
+# Ruby on Rails
+
+# Remove:
+# anything else not used
