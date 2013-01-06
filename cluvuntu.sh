@@ -1,6 +1,30 @@
 #!/bin/bash
-# Execute this script line by line after a fresh Ubuntu install to auto install
-# our favourite packages and remove all the unwanted shit
+# Execute this script after a fresh Ubuntu install to auto install
+# our favourite packages and remove all the unwanted shit.
+# Installs the following applications:
+# Google Chrome
+# Sublime Text 2 (Worlds best text editor)
+# Tilda (terminal emulator)
+# Terminator (terminal emulator)
+# VLC Player
+# EmmaSQL (GUI for MySQL like HeidiSQL for Windows)
+# Installs the following languages, dev tools and environments:
+# curl and xclip
+# Git and GitHub connection
+# Oracle Java JDK and JRE
+# Spyder (IDE for python)
+# Python modules:
+# 		scipy, numpy, matplotlib, dateutil, pytz, setuptools,
+# 		dev, statsmodels, pandas, qt4, cvxopt, pysqlite2,
+# 		mysqldb, libapache2
+# Django
+# QSTK (python financial tool)
+# R and RStudio (IDE for R)
+# LAMP
+# SQLite
+# Ruby RVM and Ruby on Rails
+# Remove the following:
+# Firefox, Thunderbird, Gwibber, Orca Reader, Empathy, all games
 echo "Cluvuntu 2012: Ubuntu 12.04 LTS, Clive styles"
 
 # Install curl
@@ -29,7 +53,7 @@ sudo apt-get install sublime-text
 echo "please test 'subl' command line tool"
 
 # Get Git
-echo "Installing Git and GitHub..."
+echo "Installing Git and connecting to GitHub..."
 sudo apt-get install git-core
 # Sets the default name for git to use when you commit
 git config --global user.name $USER
@@ -171,20 +195,20 @@ echo "Spyder"
 echo apt-get install spyder
 
 # Ruby RVM
-echo "Install Ruby..."
-ruby -v
-curl -L get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-rvm requirements
-echo "Copy above list of Additional Dependencies and paste #"
-read name
-eval $name
-rvm install 1.9.3
-rvm use 1.9.3 --default
+# echo "Install Ruby..."
+# ruby -v
+# curl -L get.rvm.io | bash -s stable
+# source ~/.rvm/scripts/rvm
+# rvm requirements
+# echo "Copy above list of Additional Dependencies and paste #"
+# read name
+# eval $name
+# rvm install 1.9.3
+# rvm use 1.9.3 --default
 # Ruby on Rails
-echo "Install Ruby on Rails..."
-rvm rubygems current
-gem install rails
+# echo "Install Ruby on Rails..."
+# rvm rubygems current
+# gem install rails
 
 # Remove:
 # Remove Firefox completely:
