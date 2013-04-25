@@ -1,6 +1,6 @@
 #!/bin/bash
 # Execute this script after a fresh Ubuntu install to auto install
-# our favourite packages and remove all the unwanted shit.
+# our favourite packages and remove all the unwanted stuff.
 # Installs the following applications:
 # Google Chrome
 # Sublime Text 2 (Worlds best text editor)
